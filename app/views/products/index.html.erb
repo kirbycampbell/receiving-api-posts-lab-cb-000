@@ -10,6 +10,7 @@
 <script type="text/javascript" charset="utf-8">
 $(function() {
   $(".js-more").on("click", function() {
+    alert("Clicked");
     var id = $(this).data("id");
     $.get("/products/" + id + ".json", function(data) {
       var product = data;
