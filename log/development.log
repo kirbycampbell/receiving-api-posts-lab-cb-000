@@ -2437,3 +2437,6 @@ Processing by ProductsController#create as */*
   [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
   [1m[35mSQL (0.4ms)[0m  INSERT INTO "products" ("name", "description", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "asdasd"], ["description", "dfsfdf"], ["inventory", 3], ["price", 1], ["created_at", "2018-11-05 21:37:29.007146"], ["updated_at", "2018-11-05 21:37:29.007146"]]
   [1m[36m (4.8ms)[0m  [1mcommit transaction[0m
+[active_model_serializers]   [1m[35mOrder Load (0.2ms)[0m  SELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?  [["product_id", 48]]
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (55.0ms)
+Completed 201 Created in 107ms (Views: 97.3ms | ActiveRecord: 6.1ms)
